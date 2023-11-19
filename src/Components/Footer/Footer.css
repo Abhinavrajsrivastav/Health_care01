@@ -24,6 +24,8 @@
 
 .footer .box-container .box a:hover i{
     padding-right:2rem;
+    /* transform: matrix(5, 0, 0, 5, 0, 0); */
+    /* transform: scale(1.1); */
 }
 
 .footer .credit{

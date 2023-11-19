@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="header">
       <a href="#" className="logo">
-        <i className="fas fa-heartbeat"></i> Health Care.
+        <i className="fas fa-heartbeat"></i> Sukoon
       </a>
 
       <nav className="navbar">
