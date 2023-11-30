@@ -19,10 +19,10 @@ const Footer = () => {
 
         <div className="box">
           <h3>contact info</h3>
-          <a href="#"> <i className="fas fa-phone"></i> +917788660212 </a>
-          <a href="#"> <i className="fas fa-phone"></i> +918726027456</a>
-          <a href="#"> <i className="fas fa-envelope"></i> divyansh@gmail.com </a>
-          <a href="#"> <i className="fas fa-map-marker-alt"></i> Vit Chennai, Tamil Nadu, india - 400104 </a>
+          <a href="#"> <i className="fas fa-phone"></i> +919919088295</a>
+          <a href="#"> <i className="fas fa-phone"></i> +919648502976</a>
+          <a href="#"> <i className="fas fa-envelope"></i> abhiraj.srivast254@gmail.com </a>
+          <a href="#"> <i className="fas fa-map-marker-alt"></i> Sain-Vihar Ghaziabad Uttar Pradesh</a>
         </div>
 
         <div className="box">
@@ -36,7 +36,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="credit"> created by <span>XYZ</span> | all rights reserved 2023</div>
+      <div className="credit"> created by <span>Abhinav</span> | all rights reserved 2023</div>
 
     </section>
   );

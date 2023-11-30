@@ -13,8 +13,6 @@ const Header = () => {
         <a href="#services">services</a>
         <a href="#about">about</a>
         <a href="#doctors">doctors</a>
-        <a href="#book">book</a>
-        <a href="#review">review</a>
         <a href="https://www.kibagames.com/Mini-Games" target="_blank" rel="noopener noreferrer">
           Fun games
         </a>
