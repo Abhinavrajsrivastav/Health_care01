@@ -1,4 +1,15 @@
-<h1>Health Care Project</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Care Project</title>
+</head>
+
+<body>
+
+    <h1>Health Care Project</h1>
 
     <h3>About the Project</h3>
     <p><i>Nurturing Healthy Lives for All Ages
@@ -55,3 +66,7 @@
     <p>This project is currently under work.</p>
 
     <p>Thank you for being a part of the Health Care project! 🌱💪</p>
+
+</body>
+
+</html>
