@@ -8,10 +8,10 @@ Welcome to the Health Care project repository! This project aims to empower indi
 https://github.com/Abhinavrajsrivastav/Health_care01.git
 
 <br><p>Table of Contents</p>
-About the Project<br>
-Features<br>
-Getting Started<br>
-Contribution Guidelines<br>
+<li>About the Project</li>
+<li>Features</li>
+<li>Getting Started</li>
+<li>Contribution Guidelines</li>
 
 <h2>Features:</h2>
 <p>Holistic Health Solutions:</p> Comprehensive health solutions catering to physical, mental, and emotional well-being.
