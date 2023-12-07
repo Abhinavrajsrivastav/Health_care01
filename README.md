@@ -1,49 +1,47 @@
 <h1>Health Care Project</h1>
+
+<h3>About the Project</h3>
 <i>Nurturing Healthy Lives for All Ages
 Welcome to the Health Care project repository! This project aims to empower individuals to cultivate a healthier lifestyle, prioritize mental wellness, and provide tailored solutions for all age groups. The project is open-source and encourages collaboration to enhance the well-being of individuals around the globe.</i>
 
-<p>Repository Link</p>
+<h3>Repository Link</h3>
 https://github.com/Abhinavrajsrivastav/Health_care01.git
 
 <p>Table of Contents</p>
-About the Project
-Features
-Getting Started
-Contribution Guidelines
-License
-About the Project
-In today's fast-paced world, health is a priority, and this project aims to make it easier for everyone to lead a healthier life. Whether you are looking for fitness tips, mental wellness resources, or age-specific health solutions, this project has got you covered.
+About the Project<br>
+Features<br>
+Getting Started<br>
+Contribution Guidelines<br>
 
-Features
-Holistic Health Solutions: Comprehensive health solutions catering to physical, mental, and emotional well-being.
+<h2>Features:</h2>
+<p>Holistic Health Solutions</p>: Comprehensive health solutions catering to physical, mental, and emotional well-being.
 
-Age-Specific Recommendations: Tailored advice and resources for individuals of all ages, from children to seniors.
+<p>Age-Specific Recommendations</p>: Tailored advice and resources for individuals of all ages, from children to seniors.
 
-Community-Driven Content: A collaborative platform where users can contribute their insights, tips, and experiences.
+<p>Community-Driven Content</p>: A collaborative platform where users can contribute their insights, tips, and experiences.
 
-Open Source: The project is open for contributions, and we welcome developers, designers, and health enthusiasts to join us in making a positive impact.
+<p>Contribute:</p> The project is open for contributions, and we welcome developers, designers, and health enthusiasts to join us in making a positive impact.
 
-Getting Started
-To get started with the Health Care project, follow these steps:
-Clone the Repository:
+<h3>Getting Started:</h3>
+<p>To get started with the Health Care project, follow these steps:</p>
 
+<p>Clone the Repository:</p>
 git clone https://github.com/Abhinavrajsrivastav/Health_care01.git
 
-Install Dependencies:
+<p>Install Dependencies:</p>
 
-# Add instructions for installing dependencies, if any
-Run the Project:
+<li>npm install or npm i</li>
+<li> Check updated dependencies if not working "npm outdated" and install all of the mention</li>
+<li>npm start 🚤</li>
 
-# Add instructions for running the project
-Contribute:
+# Explore the codebase.
+Find open issues or suggest new features<br>
+Fork the repository, make changes, and submit a pull request.<br>
 
-Explore the codebase.
-Find open issues or suggest new features.
-Fork the repository, make changes, and submit a pull request.
-Contribution Guidelines
-We appreciate contributions from the community. If you'd like to contribute, please follow our Contribution Guidelines.
+# Contribution Guidelines
+We appreciate contributions from the community. If you'd like to contribute, please follow our Contribution Guidelines.<br>
 
-License
-This project is licensed under the MIT License. Feel free to use, modify, and distribute the code for your own projects.
+# License ☑️
+This project is currently under work.
 
 Thank you for being a part of the Health Care project! 🌱💪
