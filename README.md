@@ -2,10 +2,10 @@
 <i>Nurturing Healthy Lives for All Ages
 Welcome to the Health Care project repository! This project aims to empower individuals to cultivate a healthier lifestyle, prioritize mental wellness, and provide tailored solutions for all age groups. The project is open-source and encourages collaboration to enhance the well-being of individuals around the globe.</i>
 
-Repository Link
+<p>Repository Link</p>
 https://github.com/Abhinavrajsrivastav/Health_care01.git
 
-Table of Contents
+<p>Table of Contents</p>
 About the Project
 Features
 Getting Started
