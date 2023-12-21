@@ -7,13 +7,14 @@
 .app {
   background: linear-gradient(5deg, #deeef6 0%, #3089af 100%);
   text-align: center;
-  position: relative;
+  /* position: relative;
   top: 100px;
-  left: 10px;
+  left: 10px; */
+  margin: 20%;
   width: 50%;
-  height: 40%;
+  height: 400px;
   min-height: 200px;
-  height: min-content;
+  /* height: min-content; */
   border-radius: 15px;
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
