@@ -1,25 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@500&display=swap");
-/* .header{
-  text-align: center;
-  color: #f71aa2;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
 
 .app {
   background: linear-gradient(5deg, #deeef6 0%, #3089af 100%);
-  text-align: center;
-  /* position: relative;
-  top: 100px;
-  left: 10px; */
-  margin: 20%;
+  text-align: start;
+  position: relative;
+  top: 15px;
+  left: 212px;
+  scroll-behavior: hidden;
+  margin: 10%;
   width: 50%;
-  height: 400px;
+  height: 300px;
   min-height: 200px;
-  /* height: min-content; */
   border-radius: 15px;
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: start;
 }
 
 .score-section {
@@ -29,7 +27,15 @@
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
+
+.question-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2rem;
+}
 .question-section {
+  text-align: start;
   width: 100%;
   position: relative;
 }
@@ -39,42 +45,44 @@
 }
 
 .question-count span {
-  font-size: 28px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
 }
 
 .question-text {
   margin-bottom: 12px;
   font-size: 15px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 
 /* ANSWERS/RIGHT SECTION */
 .answer-section {
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); 
   justify-content: space-between;
+  /* background-color: #4295b0; */
 }
 
 button {
-  width: 100%;
-  font-size: 16px;
-  color: #ffffff;
-  background: linear-gradient( #ff961d 0%, #f71aa2 100%);
-  border-radius: 15px;
-  display: flex;
-  padding: 5px;
-  justify-content: flex-start;
-  align-items: center;
-  border: 3px solid #234668;
-  cursor: pointer;
+    width: 65%;
+    font-size: 10px;
+    color: rgb(59, 58, 58);
+    border-radius: 7px;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: start;
+    border: 0px solid #234668;
+    cursor: pointer;
 }
 
-
+/* 
 button:hover {
-  background-color: #1b295c;
-}
+  background-color: #75a9bd;
+} */
 
 button:focus {
   outline: none;
