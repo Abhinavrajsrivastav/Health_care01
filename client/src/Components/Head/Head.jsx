@@ -15,7 +15,7 @@ const Header = () => {
       </a>
 
       <nav className="navbar">
-        <a href="#home">home</a>
+        <a href="/">home</a>
         <a href="#services">services</a>
         <a href="#about">about</a>
         <a href="#doctors">doctors</a>
@@ -31,7 +31,7 @@ const Header = () => {
             <img
               src={currentUser.avatar}
               alt="User Avatar"
-              className="h-8 w-8 rounded-full "
+              className="h-12 w-12 rounded-full "
             />
           ) : (
             <span className=" text-1.7rem hover:text-green-400">Sign in</span>

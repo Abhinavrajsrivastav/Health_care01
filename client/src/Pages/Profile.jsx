@@ -131,8 +131,8 @@ export default function Profile() {
   };
 
   return (
-    <div  >
-      <div className=" p-3 max-w-lg mx-auto">
+    <div className="flex justify-center items-center min-h-screen">
+      <div className=" p-3 w-full md:w-1/2 lg:w-1/3 mx-auto">
         <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
