@@ -34,7 +34,7 @@ const Header = () => {
               className="h-8 w-8 rounded-full "
             />
           ) : (
-            <span className="text-stone-950  text-lg hover:underline">Sign in</span>
+            <span className=" text-1.7rem hover:text-green-400">Sign in</span>
           )}
         </Link>
       </nav>
