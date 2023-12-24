@@ -19,6 +19,7 @@ const Doctors = () => {
             </div>
           </div>
 
+
           {/* Repeat the structure for other doctors... */}
         </div>
       </section>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../Components/Head/Head";
 import Home from "../Components/Home/Home";
 import Icon from "../Components/Icon/Icon";
@@ -8,18 +8,28 @@ import Doctors from "../Components/Doctor/Doctors";
 import Book from "../Components/Book/Book";
 import Review from "../Components/Review/Review";
 import Footer from "../Components/Footer/Footer";
+import Quiz from "../Components/Services/Quiz/Quiz";
+import Head from "../Components/Head/Head";
 
 const HomePage = () => {
+    const [showApp, setShowApp] = useState(false);
   return (
     <>
-      <Home />
-      <Icon />
-      <Services />
-      <About />
-      <Doctors />
-      <Book />
-      <Review />
-      <Footer />
+      {showApp ? (
+        <Quiz setShowApp={setShowApp} />
+      ) : (
+        <>
+          <Head />
+          <Home />
+          <Icon />
+          <Services setShowApp={setShowApp} />
+          <About />
+          <Doctors />
+          <Book />
+          <Review />
+          <Footer />
+        </>
+      )}
     </>
   );
 };

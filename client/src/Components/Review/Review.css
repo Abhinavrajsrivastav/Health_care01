@@ -5,6 +5,9 @@
 }
 
 .review .box-container .box{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     border:var(--border);
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
