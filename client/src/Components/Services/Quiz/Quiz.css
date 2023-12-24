@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+
+.app {
+  background: linear-gradient(5deg, #deeef6 0%, #3089af 100%);
+  text-align: start;
+  position: relative;
+  top: 15px;
+  left: 212px;
+  scroll-behavior: hidden;
+  margin: 10%;
+  width: 50%;
+  height: 300px;
+  min-height: 200px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: start;
+}
+
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+
+.question-area{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2rem;
+}
+.question-section {
+  text-align: start;
+  width: 100%;
+  position: relative;
+}
+
+.question-count {
+  margin-bottom: 20px;
+}
+
+.question-count span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+}
+
+.question-text {
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr); 
+  justify-content: space-between;
+  /* background-color: #4295b0; */
+}
+
+button {
+    width: 65%;
+    font-size: 10px;
+    color: rgb(59, 58, 58);
+    border-radius: 7px;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: start;
+    border: 0px solid #234668;
+    cursor: pointer;
+}
+
+/* 
+button:hover {
+  background-color: #75a9bd;
+} */
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+/* BackButton.css */
+.back-button {
+  /* Your styling goes here */
+  background-color: #27e52d;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+    height: 52px;
+    width: 69px;
+    position: relative;
+    top: 14px;
+    left: 15px;
+}
