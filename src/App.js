@@ -10,7 +10,7 @@ import Book from './Components/Book/Book';
 import Review from './Components/Review/Review';
 import Footer from './Components/Footer/Footer';
 import { useState } from 'react';
-import Quiz from './Components/Services/Quiz/Quiz';
+import Quiz from '../client/src/Components/Services/Quiz/Quiz';
 
 function App() {
   const [showApp, setShowApp] = useState(false);
