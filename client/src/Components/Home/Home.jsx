@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section className="home" id="home">
       <div className="image">
-        <img src="../images/doctor.jpg" alt="doctor" />
+        <img src="../images/doctor11.png" alt="doctor" />
       </div>
 
       <div className="content">

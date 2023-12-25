@@ -1,5 +1,6 @@
 import React,{ useState } from 'react';
 import './Services.css';
+import { Link } from 'react-router-dom';  
 import ReactDOM from 'react-dom';
 
 
@@ -8,7 +9,7 @@ const Services = (props) => {
 
 const handleClick = (event) => {
   event.preventDefault(); 
-  props.setShowApp(true);
+    props.setShowApp(true);
   // console.log("hello");
 };
 
@@ -43,12 +44,6 @@ const handleClick = (event) => {
           <h3>Talk to experts</h3>
           <a href="#" className="btn">Let's go<span className="fas fa-chevron-right"></span> </a>
         </div>
-
-        {/* <div className="box">
-          <i className="fas fa-procedures"></i>
-          <h3>Doctor Review</h3>
-          <a href="#review" className="btn"> Check Reviews <span className="fas fa-chevron-right"></span> </a>
-        </div> */}
 
         <div className="box">
           <i className="fas fa-notes-medical"></i>

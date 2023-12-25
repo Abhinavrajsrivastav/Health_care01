@@ -16,16 +16,9 @@ const Header = () => {
 
       <nav className="navbar">
         <a href="/">home</a>
-        <a href="#services">services</a>
         <a href="#about">about</a>
+        <a href="#services">services</a>
         <a href="#doctors">doctors</a>
-        <a
-          href="https://www.kibagames.com/Mini-Games"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Fun games
-        </a>
         <Link to="/profile">
           {currentUser ? (
             <img

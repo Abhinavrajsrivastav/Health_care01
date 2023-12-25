@@ -1,13 +1,18 @@
+// Quiz.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Quiz.css';
+import { Link } from 'react-router-dom'; 
 
 function Quiz(props) {
+   const navigate = useNavigate();
+  const onClick = () => {
+    // props.setShowApp(false);
+    navigate(-1);
 
-    const onClick = () => {
-        props.setShowApp(false);
-    }
+  };
 
-  const questions = [
+   const questions = [
   {
     questionText: 'How often do you find it difficult to concentrate on tasks due to racing thoughts or excessive worry?',
     answerOptions: [
@@ -100,63 +105,82 @@ function Quiz(props) {
   },
 ];
 
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+  const [score, setScore] = useState(0);
+  const [isSubmitVisible, setSubmitVisible] = useState(true);
 
-  const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [showScore, setShowScore] = useState(false)
-  const [score, setScore] = useState(0)
   const handleAnswerButtonClick = (isCorrect) => {
     if (isCorrect === true) {
       setScore(score + 1);
     }
 
-    const nextQuetions = currentQuestion + 1;
-    if (nextQuetions < questions.length) {
-      setCurrentQuestion(nextQuetions);
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < questions.length) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setShowScore(true);
+      setSubmitVisible(true);
     }
-    else {
-      setShowScore(true)
-    }
-  }
+  };
+
+  const handleSubmitButtonClick = () => {
+    // Add any additional logic you want to perform when the user submits the quiz
+    // For now, you can simply hide the submit button
+    setSubmitVisible(false);
+  };
 
   return (
-    <>
-      <h1 className='header'>Quiz</h1>
+    
+    <Link to ="/Quiz">
+      <>
+      <a href="#" className="logo">
+        <i className="fas fa-heartbeat"></i> Sukoon
+      </a>
       <div className="app">
-       {showScore ? (
-  <div>
-    <div className='score-section'>
-      You scored {score} out of {questions.length}
-    </div>
-    <button className="back-button" onClick={onClick}>
-      Back
-    </button>
-  </div>
-) : null}
-            <>
-  {currentQuestion < questions.length ? (
-    <div className="question-area">
-      <div className='question-section'>
-        <div className='question-count'>
-          <span>Question {currentQuestion + 1}</span>/{questions.length}
-        </div>
-        <div className='question-text'>
-          {questions[currentQuestion].questionText}
-        </div>
-      </div>
+        {showScore&&!isSubmitVisible ? (
+          <div>
+            <div className="score-section">
+              You scored {score} out of {questions.length}
+            </div>
+            <button className="back-button" onClick={onClick}>
+              Back
+            </button>
+          </div>
+        ) : null}
+        <>
+          {currentQuestion < questions.length&&isSubmitVisible ? (
+            <div className="question-area">
+              <div className="question-section">
+                <div className="question-count">
+                  <span>Question {currentQuestion + 1}</span>/{questions.length}
+                </div>
+                <div className="question-text">{questions[currentQuestion].questionText}</div>
+              </div>
 
-      <div className='answer-section'>
-        {questions[currentQuestion].answerOptions.map((answerOption, index) => (
-          <button key={index} onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}>
-            {answerOption.answerText}
-          </button>
-        ))}
-      </div>
-    </div>
-  ) : null}
-</>
-
+              <div className="answer-section">
+                {questions[currentQuestion].answerOptions.map((answerOption, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
+                  >
+                    {answerOption.answerText}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : null}
+        </>
+        <div>
+          {isSubmitVisible && showScore&& (
+              <button className="submit-button" onClick={handleSubmitButtonClick}>
+                Submit
+              </button>
+            )}
+        </div>
       </div>
     </>
+    </Link> 
   );
 }
 
