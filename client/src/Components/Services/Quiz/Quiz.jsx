@@ -3,14 +3,20 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Quiz.css';
 import { Link } from 'react-router-dom'; 
+import PopUp from '../Quiz/Pop_ups/Pop_ups.jsx';
 
 function Quiz(props) {
-   const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [popUpMessage, setPopUpMessage] = useState(null); 
   const onClick = () => {
     // props.setShowApp(false);
     navigate(-1);
-
   };
+
+  const handlePopUpClose = () => {
+  setPopUpMessage(null);
+  // Add any additional logic you want to perform when the pop-up is closed
+};
 
    const questions = [
   {
@@ -128,6 +134,15 @@ function Quiz(props) {
     // Add any additional logic you want to perform when the user submits the quiz
     // For now, you can simply hide the submit button
     setSubmitVisible(false);
+
+  // Define the pop-up messages based on the user's score
+  if (score < 5) {
+    setPopUpMessage("Would you like to talk to our expert?");
+  } else if (score >= 5 && score <= 7) {
+    setPopUpMessage("Consider taking some time to relax and try meditation.");
+  } else if (score >= 8 && score <= 10) {
+    setPopUpMessage("You are absolutely fine! Enjoy your day.");
+  }
   };
 
   return (

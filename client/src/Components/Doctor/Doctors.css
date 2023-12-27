@@ -1,16 +1,28 @@
 .doctors .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    justify-content: center;
+
+    /* grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); */
     gap:2rem;
 }
 
 .doctors .box-container .box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
     text-align: center;
     background:#fff;
     border-radius: .5rem;
     border:var(--border);
     box-shadow: var(--box-shadow);
     padding:2rem;
+}
+
+.box-container .box .box_doc img{
+
+    margin-left: 20px;
 }
 
 

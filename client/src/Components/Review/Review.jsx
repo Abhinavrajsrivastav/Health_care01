@@ -48,6 +48,19 @@ const Review = () => {
           <p className="text"></p>
         </div>
 
+ <div className="box">
+          <img src="../images/Ant.jpg" alt="Tanya" />
+          <h3>Anant</h3>
+          <div className="stars">
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star"></i>
+            <i className="fas fa-star-half-alt"></i>
+            <i className="fas fa-star-half-alt"></i>
+          </div>
+          <p className="text"></p>
+        </div>
+
       </div>
     </section>
   );
