@@ -1,22 +1,11 @@
 // Quiz.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Quiz.css';
-import { Link } from 'react-router-dom'; 
-import PopUp from '../Quiz/Pop_ups/Pop_ups.jsx';
+import Sub_Quiz from './SubQuiz/Sub_Quiz.jsx';
 
-function Quiz(props) {
+function Quiz() {
   const navigate = useNavigate();
-  const [popUpMessage, setPopUpMessage] = useState(null); 
-  const onClick = () => {
-    // props.setShowApp(false);
-    navigate(-1);
-  };
-
-  const handlePopUpClose = () => {
-  setPopUpMessage(null);
-  // Add any additional logic you want to perform when the pop-up is closed
-};
+  const [showPopUp, setShowPopUp] = useState(false);
 
    const questions = [
   {
@@ -115,9 +104,11 @@ function Quiz(props) {
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
   const [isSubmitVisible, setSubmitVisible] = useState(true);
+  const [popUp, setPopUp] = useState(false);
+  const [popUpMessage, setPopUpMessage] = useState(null);
 
   const handleAnswerButtonClick = (isCorrect) => {
-    if (isCorrect === true) {
+    if (isCorrect) {
       setScore(score + 1);
     }
 
@@ -131,71 +122,34 @@ function Quiz(props) {
   };
 
   const handleSubmitButtonClick = () => {
-    // Add any additional logic you want to perform when the user submits the quiz
-    // For now, you can simply hide the submit button
     setSubmitVisible(false);
+    setPopUp(true);
 
-  // Define the pop-up messages based on the user's score
-  if (score < 5) {
-    setPopUpMessage("Would you like to talk to our expert?");
-  } else if (score >= 5 && score <= 7) {
-    setPopUpMessage("Consider taking some time to relax and try meditation.");
-  } else if (score >= 8 && score <= 10) {
-    setPopUpMessage("You are absolutely fine! Enjoy your day.");
-  }
+    // Define the pop-up messages based on the user's score
+    if (score < 5) {
+      setPopUpMessage("Would you like to talk to our expert?");
+    } else if (score >= 5 && score <= 7) {
+      setPopUpMessage("Consider taking some time to relax and try meditation.");
+    } else if (score >= 8 && score <= 10) {
+      setPopUpMessage("You are absolutely fine! Enjoy your day.");
+    }
   };
 
   return (
-    
-    <Link to ="/Quiz">
-      <>
-      <a href="#" className="logo">
-        <i className="fas fa-heartbeat"></i> Sukoon
-      </a>
-      <div className="app">
-        {showScore&&!isSubmitVisible ? (
-          <div>
-            <div className="score-section">
-              You scored {score} out of {questions.length}
-            </div>
-            <button className="back-button" onClick={onClick}>
-              Back
-            </button>
-          </div>
-        ) : null}
-        <>
-          {currentQuestion < questions.length&&isSubmitVisible ? (
-            <div className="question-area">
-              <div className="question-section">
-                <div className="question-count">
-                  <span>Question {currentQuestion + 1}</span>/{questions.length}
-                </div>
-                <div className="question-text">{questions[currentQuestion].questionText}</div>
-              </div>
-
-              <div className="answer-section">
-                {questions[currentQuestion].answerOptions.map((answerOption, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleAnswerButtonClick(answerOption.isCorrect)}
-                  >
-                    {answerOption.answerText}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ) : null}
-        </>
-        <div>
-          {isSubmitVisible && showScore&& (
-              <button className="submit-button" onClick={handleSubmitButtonClick}>
-                Submit
-              </button>
-            )}
-        </div>
-      </div>
+    <>
+      <Sub_Quiz
+        setPopUp={setPopUp}
+        showScore={showScore}
+        isSubmitVisible={isSubmitVisible}
+        score={score}
+        questions={questions}
+        onClick={() => navigate(-1)}
+        currentQuestion={currentQuestion}
+        handleAnswerButtonClick={handleAnswerButtonClick}
+        handleSubmitButtonClick={handleSubmitButtonClick}
+        popUpMessage={popUpMessage}
+      />
     </>
-    </Link> 
   );
 }
 

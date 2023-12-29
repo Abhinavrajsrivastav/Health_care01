@@ -26,8 +26,8 @@
   font-size: 24px;
   align-items: center;
   position: relative;
-  left: 26rem;
-  top: 15rem;
+  left: 14rem;
+  top: 7rem;
 }
 
 /* QUESTION/TIMER/LEFT SECTION */
@@ -98,21 +98,29 @@ button svg {
   margin-right: 5px;
 }
 
-/* BackButton.css */
+/* Score section */
+.scoreSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+}
+
 .back-button {
   /* Your styling goes here */
   background-color: #27e52d;
+  padding: 8px;
   color: white;
-  padding: 10px 15px;
   font-size: 16px;
   border: none;
   cursor: pointer;
   border-radius: 10%;
-    height: 42px;
-    width: 69px;
-    position: relative;
-    top: 17rem;
-    left: 39rem;
+  height: 42px;
+  width: 58px;
+  position: relative;
+  left: -2rem;
+  top: 2rem;
 }
 
 /* <------------------------submit quiz button------------------------> */
@@ -126,10 +134,19 @@ button svg {
   border: none;
   border-radius: 5px;
   margin-top: 10px;
-  width: 15%;
-  float: right;
+  width: auto;
+  float: right; 
 }
 
 .submit-button:hover {
   background-color: #45a049;
+}
+
+.submit_quiz_response{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  top: 9rem;
 }
