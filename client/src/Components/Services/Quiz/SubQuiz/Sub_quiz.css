@@ -26,7 +26,7 @@
   font-size: 24px;
   align-items: center;
   position: relative;
-  left: 14rem;
+  left: 13rem;
   top: 7rem;
 }
 
@@ -150,3 +150,74 @@ button svg {
   position: relative;
   top: 9rem;
 }
+
+
+/* ---------------Mobile compatible---------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+
+
+/* Mobile-friendly styles */
+@media only screen and (max-width: 768px) {
+  .app {
+    /* width: 80%; */
+    position: relative;
+    top: 20rem;
+    left: 10px;
+    width: auto;
+    height: auto;
+  }
+
+  .score-section {
+    left: 0rem;
+    top: 0rem;
+    height: auto;
+  }
+.scoreSection{ 
+  height: auto;
+}
+  .question-area {
+    gap: 8rem;
+    height: auto;
+  }
+
+  .question-section {
+    text-align: center;
+        height: auto;
+  }
+
+  .question-count {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .question-text {
+    text-align: center;
+  }
+
+  .answer-section {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  button {
+   width: auto;
+   height: auto;
+  }
+
+  .scoreSection {
+    gap: 1rem;
+    height: auto;
+  }
+
+  .back-button {
+    width: auto;
+    height: auto;
+    /* top: 1rem; */
+    left: 1rem;
+  }
+}
+
+
