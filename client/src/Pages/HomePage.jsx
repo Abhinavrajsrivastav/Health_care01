@@ -10,19 +10,24 @@ import Review from "../Components/Review/Review";
 import Footer from "../Components/Footer/Footer";
 import Quiz from "../Components/Services/Quiz/Quiz";
 import Head from "../Components/Head/Head";
+import Video from "../Components/Services/Videocall/Video";
 
 const HomePage = () => {
     const [showApp, setShowApp] = useState(false);
+    const [videoCall, setVideoCall] = useState(false);
   return (
     <>
       {showApp ? (
         <Quiz setShowApp={setShowApp} />
       ) : (
+        videoCall ? (
+          <Video setVideoCall={setVideoCall}/>
+        ) :
         <>
           <Head />
           <Home />
           <Icon />
-          <Services setShowApp={setShowApp} />
+          <Services setShowApp={setShowApp} setVideoCall={setVideoCall}/>
           <About />
           <Doctors />
           <Book />

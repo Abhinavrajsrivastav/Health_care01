@@ -1,0 +1,71 @@
+.videoDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.videos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    width: auto;
+}
+
+video {
+    width: 45%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 297px;
+    width: 330px;
+}
+
+.remoteContainer {
+    position: relative;
+    width: 30;
+}
+
+.remoteVideo, .localVideo{
+    width: 430px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 297px;
+}
+.remoteImage {
+    width: auto;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    position: relative;
+    top: 8rem;
+    left: 0rem;
+}
+
+.videobtn {
+    font-size: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    background-color: #08716d;
+    width: 126px;
+}

@@ -2,14 +2,27 @@ import React, { useEffect, useState } from "react";
 import "./Head.css";
 
 import { Link, useNavigate } from "react-router-dom";
-import { TbHomeSearch } from "react-icons/tb";
 import { useSelector } from "react-redux";
 
 const Header = () => {
   const { currentUser } = useSelector((state) => state.user);
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const body = document.body;
+    if (darkMode) {
+      body.classList.add("dark-mode");
+    } else {
+      body.classList.remove("dark-mode");
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <header className="header">
+    <header className={`header ${darkMode ? "dark-mode" : ""}`}>
       <a href="#" className="logo">
         <i className="fas fa-heartbeat"></i> Sukoon
       </a>
@@ -25,9 +38,10 @@ const Header = () => {
               src={currentUser.avatar}
               alt="User Avatar"
               className="h-12 w-12 rounded-full "
+              onclick={toggleDarkMode}
             />
           ) : (
-            <span className=" text-1.7rem hover:text-green-400">Sign in</span>
+            <span className="text-1.7rem hover:text-green-400">Sign in</span>
           )}
         </Link>
       </nav>

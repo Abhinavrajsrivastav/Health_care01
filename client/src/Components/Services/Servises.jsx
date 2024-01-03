@@ -2,7 +2,7 @@ import React,{ useState } from 'react';
 import './Services.css';
 import { Link } from 'react-router-dom';  
 import ReactDOM from 'react-dom';
-
+// import Video from '../../../../Videocall/Video';
 
 
 const Services = (props) => {
@@ -12,6 +12,13 @@ const handleClick = (event) => {
     props.setShowApp(true);
   // console.log("hello");
 };
+
+
+
+const renderVideo = (event) => {    
+  event.preventDefault();
+   props.setVideoCall(true);
+}
 
 
   return (
@@ -33,13 +40,13 @@ const handleClick = (event) => {
           <a href="https://www.crazygames.com/t/candy" className="btn">Play<span className="fas fa-chevron-right"></span> </a>
         </div>
 
-        <div className="box">
+        <div className="box" > 
           <i className="fas fa-user-md"></i>
           <h3>expert doctors</h3>
           <a href="#doctors" className="btn"> learn more <span className="fas fa-chevron-right"></span> </a>
         </div>
 
-        <div className="box">
+        <div className="box" onClick={renderVideo}> 
           <i className="fas fa-video"></i>
           <h3>Talk to experts</h3>
           <a href="#" className="btn">Let's go<span className="fas fa-chevron-right"></span> </a>
