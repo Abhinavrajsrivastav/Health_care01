@@ -8,6 +8,7 @@ import Profile from "./Pages/Profile";
 import PrivateRoute from "./Components/PrivateRoute";
 import Quiz from "./Components/Services/Quiz/Quiz"; // Import the Quiz component
 import Video from "./Components/Services/Videocall/Video"; // Import the Video component
+import About from "./Components/About/About";
 
 function App() {
   return (
