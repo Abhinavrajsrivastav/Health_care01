@@ -1,3 +1,7 @@
+/* body{
+    background-color: #194048;
+} */
+
 .videoDiv{
   display: flex;
   flex-direction: column;
@@ -29,7 +33,7 @@ video {
 
 .remoteVideo, .localVideo{
     width: 430px;
-    max-width: 400px;
+    max-width: 395px;
     border: 1px solid #ccc;
     border-radius: 8px;
     height: 297px;
@@ -68,4 +72,68 @@ video {
     color: white;
     background-color: #08716d;
     width: 126px;
+}
+
+
+.localVideoContainer {
+  position: relative;
+}
+
+.overlayText {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: rgb(0, 0, 0); 
+  font-size: 8px;
+  font-weight: bold; 
+  padding: 10px;
+}
+
+.localVideoContainer,
+.remoteContainer {
+  position: relative;
+}
+
+.localVideo,
+.remoteImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlayText {
+position: absolute;
+top: 7%;
+left: 18%;
+transform: translate(-50%, -50%);
+color: white;
+font-size: 11px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.videobtn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.videobtn.active {
+  background-color: green; /* Change this to your desired active color */
+  color: white;
+}
+
+.videobtn.red.active {
+  background-color: red; /* Change this to your desired active color for the hangup button */
 }

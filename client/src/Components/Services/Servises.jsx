@@ -2,22 +2,13 @@ import React,{ useState } from 'react';
 import './Services.css';
 import { Link } from 'react-router-dom';  
 import ReactDOM from 'react-dom';
-// import Video from '../../../../Videocall/Video';
 
 
 const Services = (props) => {
 
-const handleClick = (event) => {
-  event.preventDefault(); 
-    props.setShowApp(true);
-  // console.log("hello");
-};
-
-
-
-const renderVideo = (event) => {    
+const renderChat = (event) => { 
   event.preventDefault();
-   props.setVideoCall(true);
+  props.setChat(true);
 }
 
 
@@ -46,10 +37,10 @@ const renderVideo = (event) => {
           <a href="#doctors" className="btn"> learn more <span className="fas fa-chevron-right"></span> </a>
         </div>
 
-        <div className="box" onClick={renderVideo}> 
+        <div className="box" > 
           <i className="fas fa-video"></i>
           <h3>Talk to experts</h3>
-          <a href="#" className="btn">Let's go<span className="fas fa-chevron-right"></span> </a>
+          <Link to="/Video" className="btn">Let's go<span className="fas fa-chevron-right"></span> </Link>
         </div>
 
         <div className="box">
@@ -58,10 +49,10 @@ const renderVideo = (event) => {
           <a href="https://www.health.harvard.edu/topics/mental-health" className="btn">Read<span className="fas fa-chevron-right"></span> </a>
         </div>
 
-        <div className="box" onClick={handleClick}>
+        <div className="box" >
           <i className="fas fa-notes-medical"></i>
           <h3>Take a quiz</h3>
-          <a href="" className="btn">take<span className="fas fa-chevron-right"></span></a>
+          <Link to="/Quiz" className="btn">take<span className="fas fa-chevron-right"></span></Link>
         </div>
 
       </div>

@@ -11,29 +11,30 @@ import Footer from "../Components/Footer/Footer";
 import Quiz from "../Components/Services/Quiz/Quiz";
 import Head from "../Components/Head/Head";
 import Video from "../Components/Services/Videocall/Video";
+// import Chat from "../../../chat/Chat";
 
 const HomePage = () => {
     const [showApp, setShowApp] = useState(false);
     const [videoCall, setVideoCall] = useState(false);
+    const [chat, setChat] = useState(false);
   return (
     <>
       {showApp ? (
         <Quiz setShowApp={setShowApp} />
       ) : (
-        videoCall ? (
-          <Video setVideoCall={setVideoCall}/>
-        ) :
-        <>
-          <Head />
-          <Home />
-          <Icon />
-          <Services setShowApp={setShowApp} setVideoCall={setVideoCall}/>
-          <About />
-          <Doctors />
-          <Book />
-          <Review />
-          <Footer />
-        </>
+          (
+          <>
+            <Head />
+            <Home />
+            <Icon />
+            <Services />
+            <About />
+            <Doctors />
+            <Book />
+            <Review />
+            <Footer />
+          </>
+        )
       )}
     </>
   );

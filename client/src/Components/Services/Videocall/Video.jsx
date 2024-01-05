@@ -1,7 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Video.css';
+import { FaPhone, FaPhoneSlash } from 'react-icons/fa';
+import { Route, Routes, Link } from 'react-router-dom';
 
 const Video = () => {
+  const [isCallActive, setIsCallActive] = useState(false);
+
   const startButtonRef = useRef(null);
   const hangupButtonRef = useRef(null);
   const localVideoRef = useRef(null);
@@ -42,6 +46,8 @@ const Video = () => {
       // Send the offer to the other peer using your signaling server or other means
       // For simplicity, we'll just log it here
       console.log('Offer created:', offer);
+
+      setIsCallActive(true);
     } catch (error) {
       console.error('Error starting call:', error);
     }
@@ -76,24 +82,35 @@ const Video = () => {
     localStream.getTracks().forEach(track => track.stop());
     localVideoRef.current.srcObject = null;
     remoteVideoRef.current.srcObject = null;
+
+    setIsCallActive(false);
   };
 
   return (
-    <>
-    <div className="videoDiv">
-       <div className="videos">
-        <video ref={localVideoRef} autoPlay muted className="localVideo"></video>
-        <div className="remoteContainer">
-          {/* <video ref={remoteVideoRef} autoPlay></video> */}
-          <img ref={remoteImageRef} src="../images/doctor.jpg" alt="Remote Image" className="localVideo"></img>
+        <div className="videoDiv">
+          <div className="videos">
+            {/* Local Video Section */}
+            <div className="localVideoContainer">
+              <video ref={localVideoRef} autoPlay muted className="localVideo"></video>
+              <div className="overlayText">This is client screen</div>
+            </div>
+
+            {/* Remote Video Section */}
+            <div className="remoteContainer">
+              {/* <video ref={remoteVideoRef} autoPlay></video> */}
+              <div className="overlayText">This is doctor screen</div>
+              <img ref={remoteImageRef} src="../images/doctor.jpg" alt="Remote Image" className="localVideo"></img>
+            </div>
+          </div>
+          <div className="controls">
+            <button ref={startButtonRef} className={`videobtn ${isCallActive ? 'active' : ''}`}>
+              <FaPhone /> {/* Font Awesome phone icon */}
+            </button>
+            <button ref={hangupButtonRef} className={`videobtn red ${isCallActive ? 'active' : ''}`}>
+              <FaPhoneSlash /> {/* Font Awesome phone slash icon */}
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="controls">
-        <button ref={startButtonRef} className="videobtn">Start Call</button>
-        <button ref={hangupButtonRef} className="videobtn">End Call</button>
-      </div>
-    </div>
-    </>
   );
 };
 

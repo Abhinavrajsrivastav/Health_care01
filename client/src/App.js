@@ -7,6 +7,7 @@ import SignIn from "./Pages/SignIn";
 import Profile from "./Pages/Profile";
 import PrivateRoute from "./Components/PrivateRoute";
 import Quiz from "./Components/Services/Quiz/Quiz"; // Import the Quiz component
+import Video from "./Components/Services/Videocall/Video"; // Import the Video component
 
 function App() {
   const [showApp, setShowApp] = useState(false);
@@ -18,13 +19,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route element={<PrivateRoute />}>
-          <Route path="/profile" element={<Profile />} />
-          <Route
-            path="/Quiz"
-            element={<Quiz setShowApp={setShowApp} />} 
-          />
-        </Route>
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/Quiz" element={<Quiz />} />
+        <Route path="/Video" element={<Video />} />
       </Routes>
     </BrowserRouter>
   );
