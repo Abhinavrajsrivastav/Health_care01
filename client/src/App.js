@@ -10,8 +10,6 @@ import Quiz from "./Components/Services/Quiz/Quiz"; // Import the Quiz component
 import Video from "./Components/Services/Videocall/Video"; // Import the Video component
 
 function App() {
-  const [showApp, setShowApp] = useState(false);
-
   return (
     <BrowserRouter>
       <Header />

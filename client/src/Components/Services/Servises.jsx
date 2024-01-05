@@ -6,12 +6,6 @@ import ReactDOM from 'react-dom';
 
 const Services = (props) => {
 
-const renderChat = (event) => { 
-  event.preventDefault();
-  props.setChat(true);
-}
-
-
   return (
     <section className="services" id="services">
 
